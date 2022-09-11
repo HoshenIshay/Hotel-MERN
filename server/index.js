@@ -7,12 +7,12 @@ app.use(cors());
 
 
 const CONNECTION_URL =
-"mongodb+srv://Hoshen:LaBbJUrrmpzDKafG@cluster0.bjc7k.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
 
 
 app.get("/sendSMS", function (req, res) {
-  var accountSid = "AC4aa5a814a30c72281539a313411a6b1f"; 
-  var authToken = "2b98b7409fa9046c3a190f7fd66ff660"; 
+  var accountSid = "xxxxxxxxxxxxxxxxxxxxxxxxxx"; 
+  var authToken = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"; 
 
   var twilio = require("twilio");
   var client = new twilio(accountSid, authToken);
@@ -20,8 +20,8 @@ app.get("/sendSMS", function (req, res) {
   client.messages
     .create({
       body: "Hello from Node",
-      to: "+972555570355",
-      from: "+19894478925",
+      to: "xxxxxxxxxxxxx",
+      from: "xxxxxxxxxxxxxxxxxxxx",
     })
     .then((message) => res.send(`The message with id: ${message} was sent!`));
 });
